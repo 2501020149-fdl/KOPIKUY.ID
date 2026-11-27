@@ -1,0 +1,16 @@
+{
+  "hot": [
+    { "id": 1, "title": "Espresso", "description": "Double shot, pekat dan bersih.", "ingredients": ["Espresso"], "image": "", "price": 22 },
+    { "id": 2, "title": "Kopi Susu", "description": "Perpaduan kopi dan susu segar.", "ingredients": ["Espresso", "Susu"], "image": "", "price": 20 },
+    { "id": 3, "title": "Cappuccino", "description": "Busa susu tebal dan kopi yang strong.", "ingredients": ["Espresso", "Susu", "Foam"], "image": "", "price": 28 },
+    { "id": 4, "title": "Matcha Latte", "description": "Teh Jepang dengan susu segar.", "ingredients": ["Matcha", "Susu"], "image": "", "price": 32 },
+    { "id": 5, "title": "Milk Tea", "description": "Teh alami dengan susu segar.", "ingredients": ["Teh", "Susu"], "image": "", "price": 24 }
+  ],
+  "iced": [
+    { "id": 1, "title": "Kopi Susu", "description": "Perpaduan kopi dan susu segar.", "ingredients": ["Espresso", "Susu", "Es"], "image": "", "price": 23 },
+    { "id": 2, "title": "Cappuccino", "description": "Busa susu tebal dan kopi yang strong.", "ingredients": ["Espresso", "Susu", "Es"], "image": "", "price": 30 },
+    { "id": 3, "title": "Matcha Latte", "description": "Teh Jepang dengan susu segar.", "ingredients": ["Matcha", "Susu", "Es"], "image": "", "price": 35 },
+    { "id": 4, "title": "Lemon Sparkling", "description": "Lemon segar dengan soda.", "ingredients": ["Lemon", "Soda", "Es"], "image": "", "price": 25 },
+    { "id": 5, "title": "Milk Tea", "description": "Teh alami dengan susu segar.", "ingredients": ["Teh", "Susu", "Es"], "image": "", "price": 32 }
+  ]
+}

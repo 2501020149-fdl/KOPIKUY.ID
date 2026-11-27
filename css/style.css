@@ -1,0 +1,41 @@
+/* CSS tambahan. Sisanya pakai class Tailwind langsung di HTML. */
+
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+
+/* Bayangan card: offset hijau transparan, lebih bersih dari abu-coklat */
+.card-shadow { box-shadow: 8px 10px 0 rgba(4, 83, 58, 0.16); }
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-light { background: #FBF4E0; color: #04533A; }
+.btn-light:hover { background: #EFE5C8; }
+.btn-outline { border: 2px solid #FBF4E0; color: #FBF4E0; }
+.btn-outline:hover { background: #FBF4E0; color: #04533A; }
+.btn-dark { background: #04533A; color: #FBF4E0; }
+.btn-dark:hover { background: #033B2A; }
+
+/* Link navigasi dengan garis bawah untuk halaman aktif */
+.nav-link { padding-bottom: 2px; border-bottom: 2px solid transparent; }
+.nav-link:hover,
+.nav-link[aria-current="page"] { border-bottom-color: #FBF4E0; }
+
+/* Ikon SVG */
+.icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Fokus keyboard yang jelas */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #E8A33D;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

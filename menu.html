@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu – KOPIKUY</title>
+  <meta name="description" content="Daftar menu Kopikuy: kopi dan non-kopi, hot atau iced." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Gaegu:wght@700&family=Rozha+One&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-cream font-sans text-brand">
+
+  <!-- ========== HEADER (sama dengan Home) ========== -->
+  <header class="sticky top-0 z-40 bg-brand text-cream">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo Kopikuy" class="h-12 w-12 object-contain md:h-16 md:w-16" />
+        <span class="font-display text-2xl md:text-3xl">KOPIKUY</span>
+      </a>
+
+      <nav class="hidden items-center gap-10 font-bold md:flex" aria-label="Navigasi utama">
+        <a href="menu.html" class="nav-link" aria-current="page">Menu</a>
+        <a href="index.html#lokasi" class="nav-link">Lokasi</a>
+      </nav>
+
+      <p class="hidden text-right text-sm font-bold leading-tight md:block">10.00–23.00<br />Senin–Sabtu</p>
+
+      <button id="menu-btn" class="p-2 md:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon h-7 w-7" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden border-t border-cream/20 px-4 pb-4 md:hidden" aria-label="Navigasi mobile">
+      <a href="index.html" class="block border-b border-cream/20 py-3 font-bold">Beranda</a>
+      <a href="menu.html" class="block border-b border-cream/20 py-3 font-bold" aria-current="page">Menu</a>
+      <a href="index.html#lokasi" class="block border-b border-cream/20 py-3 font-bold">Lokasi</a>
+      <a href="https://wa.me/62XXXXXXXXXX" target="_blank" rel="noopener" class="block py-3 font-bold">Chat WhatsApp</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-12">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <h1 class="font-display text-4xl md:text-5xl">Menu</h1>
+
+      <!-- Pilih jenis minuman (logika di js/menu.js) -->
+      <div class="flex gap-2" role="group" aria-label="Pilih jenis minuman">
+        <button data-type="hot" aria-pressed="true" class="filter-btn rounded-full border-2 border-brand px-5 py-1 font-bold">Hot</button>
+        <button data-type="iced" aria-pressed="false" class="filter-btn rounded-full border-2 border-brand px-5 py-1 font-bold">Iced</button>
+      </div>
+    </div>
+
+    <!-- Status: loading / error -->
+    <div id="status" class="mt-8" role="status" aria-live="polite"></div>
+
+    <!-- Kartu menu diisi dari API oleh js/menu.js -->
+    <div id="menu-list" class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+  </main>
+
+  <footer class="bg-brand text-cream">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm md:flex-row md:px-8">
+      <p>© <span id="year"></span> Kopikuy. Buka 10.00–23.00, Senin–Sabtu.</p>
+      <a href="https://wa.me/623184370105" target="_blank" rel="noopener" class="font-bold underline">Chat WhatsApp</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

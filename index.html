@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOPIKUY – Tanjungpinang's Finest To-Go</title>
+  <meta name="description" content="Kopikuy, kopi to-go di Jl. Merdeka, Tanjungpinang. Mulai dari 20K." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Gaegu:wght@700&family=Rozha+One&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-cream font-sans text-brand">
+
+  <!-- ========== HEADER ========== -->
+  <header class="sticky top-0 z-40 bg-brand text-cream">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo Kopikuy" class="h-12 w-12 object-contain md:h-16 md:w-16" />
+        <span class="font-display text-2xl md:text-3xl">KOPIKUY</span>
+      </a>
+
+      <nav class="hidden items-center gap-10 font-bold md:flex" aria-label="Navigasi utama">
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="#lokasi" class="nav-link">Lokasi</a>
+      </nav>
+
+      <a href="#cara-pesan" class="btn btn-light hidden md:inline-block">Pesan sekarang</a>
+
+      <button id="menu-btn" class="p-2 md:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon h-7 w-7" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+
+    <!-- Menu mobile (dibuka-tutup lewat js/main.js) -->
+    <nav id="mobile-menu" class="hidden border-t border-cream/20 px-4 pb-4 md:hidden" aria-label="Navigasi mobile">
+      <a href="index.html" class="block border-b border-cream/20 py-3 font-bold">Beranda</a>
+      <a href="menu.html" class="block border-b border-cream/20 py-3 font-bold">Menu</a>
+      <a href="#lokasi" class="block border-b border-cream/20 py-3 font-bold">Lokasi</a>
+      <a href="#cara-pesan" class="block border-b border-cream/20 py-3 font-bold">Cara pesan</a>
+      <a href="https://wa.me/623184370105" target="_blank" rel="noopener" class="block py-3 font-bold">Chat WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="mx-auto grid max-w-7xl gap-6 px-4 py-8 md:grid-cols-2 md:px-8 md:py-12">
+
+      <!-- Kiri: copy + CTA -->
+      <div class="card-shadow flex flex-col rounded-3xl bg-brand p-6 text-cream md:p-10">
+        <span class="self-center rounded-full bg-cream px-4 py-1 text-sm font-bold text-brand">Tanjungpinang's Finest To-Go</span>
+        <h1 class="mt-8 font-display text-4xl leading-tight md:text-6xl">Enjoy kopi berkualitas, kapan saja</h1>
+        <p class="mt-5 max-w-md text-lg text-cream/90">Bikin harimu ceria dengan kopi berkualitas.</p>
+        <div class="mt-auto flex flex-wrap gap-3 pt-10">
+          <a href="menu.html" class="btn btn-light">Lihat menu</a>
+          <a href="#lokasi" class="btn btn-outline">Cek lokasi</a>
+        </div>
+      </div>
+
+      <!-- Kanan: signature drink -->
+      <div class="card-shadow relative flex min-h-[420px] flex-col items-center rounded-3xl bg-cream p-6 ring-1 ring-brand/10 md:p-8">
+        <h2 class="font-display text-4xl md:text-5xl">Kopi Susu</h2>
+        <p class="font-hand text-2xl">Signature drink</p>
+        <img src="assets/kopi-susu.png" alt="Es Kopi Susu Kopikuy dengan biji kopi dan cipratan susu" class="mt-2 max-h-[460px] w-full flex-1 object-contain" />
+      </div>
+    </section>
+
+    <!-- ========== INFO: harga, lokasi, fasilitas ========== -->
+    <section id="lokasi" class="mx-auto grid max-w-7xl gap-6 px-4 pb-12 sm:grid-cols-2 md:px-8 lg:grid-cols-[1fr_3fr_1.3fr]">
+
+      <!-- Harga -->
+      <div class="card-shadow flex flex-col justify-between gap-6 rounded-3xl bg-cream p-6 ring-1 ring-brand/10">
+        <div class="grid h-16 w-16 place-items-center rounded-xl bg-cream-deep">
+          <svg class="icon h-9 w-9" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2" /><circle cx="12" cy="12" r="2" /><path d="M6 12h.01M18 12h.01" /></svg>
+        </div>
+        <div>
+          <p class="font-bold">Mulai dari</p>
+          <p class="font-display text-4xl">20K</p>
+        </div>
+      </div>
+
+      <!-- Lokasi + peta -->
+      <div class="card-shadow grid overflow-hidden rounded-3xl bg-cream ring-1 ring-brand/10 sm:order-first sm:col-span-2 md:grid-cols-2 lg:order-none lg:col-span-1">
+        <div class="flex flex-col justify-between gap-6 p-6">
+          <div class="flex items-center gap-3">
+            <svg class="icon h-9 w-9" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+            <h2 class="text-xl font-bold">Lokasi kami</h2>
+          </div>
+          <div>
+            <p class="font-display text-4xl">Kopikuy</p>
+            <p class="mt-1 text-lg">Jl. Merdeka, Tanjungpinang</p>
+            <p class="mt-1">Buka 10.00–23.00, Senin–Sabtu</p>
+          </div>
+        </div>
+        <iframe
+          title="Peta lokasi Kopikuy"
+          class="h-64 w-full md:h-full md:min-h-[240px]"
+          loading="lazy"
+          src="https://maps.google.com/maps?q=Jl.+Merdeka+Tanjungpinang&output=embed"></iframe>
+      </div>
+
+      <!-- Fasilitas -->
+      <div class="card-shadow flex flex-col justify-between gap-6 rounded-3xl bg-cream p-6 ring-1 ring-brand/10">
+        <h2 class="text-xl font-bold">Nyaman buat nongkrong dan kerja</h2>
+        <ul class="flex gap-6" aria-label="Fasilitas">
+          <li class="text-center"><svg class="icon h-10 w-10" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" /></svg><span class="text-sm">Colokan</span></li>
+          <li class="text-center"><svg class="icon h-10 w-10" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0" /><circle cx="12" cy="20" r="1" /></svg><span class="text-sm">Wi-Fi</span></li>
+          <li class="text-center"><svg class="icon h-10 w-10" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20M5 5l14 14M19 5 5 19" /></svg><span class="text-sm">AC</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== CARA PESAN ========== -->
+    <section id="cara-pesan" class="mx-auto max-w-7xl px-4 pb-16 md:px-8">
+      <h2 class="font-display text-3xl md:text-4xl">Cara pesan</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <article class="card-shadow flex items-center gap-5 rounded-3xl bg-brand p-6 text-cream">
+          <img src="assets/logo.png" alt="" class="h-20 w-20 object-contain" />
+          <div>
+            <h3 class="font-hand text-3xl">Dine-in</h3>
+            <p>Scan barcode dan pesan menu langsung di tempat.</p>
+          </div>
+        </article>
+        <article class="card-shadow flex items-center gap-5 rounded-3xl bg-brand p-6 text-cream">
+          <img src="assets/logo.png" alt="" class="h-20 w-20 object-contain" />
+          <div>
+            <h3 class="font-hand text-3xl">Take-away</h3>
+            <p>Scan barcode di kasir, pesan, lalu bayar.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-brand text-cream">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm md:flex-row md:px-8">
+      <p>© <span id="year"></span> Kopikuy. Buka 10.00–23.00, Senin–Sabtu.</p>
+      <a href="https://wa.me/6283184370105" target="_blank" rel="noopener" class="font-bold underline">Chat WhatsApp</a>
+    </div>
+  </footer>
+
+    <!-- JAVASCRIPT -->
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
